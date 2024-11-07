@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <h1>ID Card Management System</h1>
+            <button id="showFormBtn" class="add-button">
+                <i class="fas fa-plus"></i> Add New Card
+            </button>
+        </header>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter-section">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search in all fields...">
+            </div>
+           <!-- Replace the existing filter-container div in index.html with this: -->
+<div class="filter-container">
+    <div class="filter-header" onclick="toggleFilterDropdown()">
+        <i class="fas fa-filter filter-icon"></i>
+        <span>Filter</span>
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </div>
+    <div class="filter-dropdown" id="filterDropdown">
+        <div class="filter-tags" id="selectedFilters"></div>
+        <select id="filterSelect" multiple>
+            <!-- Filter options will be dynamically added here -->
+        </select>
+    </div>
+</div>
+</div>
+
+        <!-- Form Section (Hidden by default) -->
+        <div class="form-section" id="formSection" style="display: none;">
+            <div class="form-header">
+                <h2>Create New ID Card</h2>
+                <button id="hideFormBtn" class="close-button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="idCardForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <input type="text" id="idNumber" placeholder="ID Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="address" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="dob">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="fatherName" placeholder="Father's Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="issuedBy" placeholder="Issued By">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="issuedOn">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="other" placeholder="Other Information">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="filterBy" placeholder="Filter Categories (comma separated)">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" id="submitBtn">Create Card</button>
+                    </div>
+                </div>
+            </form>
+            
+            <!-- Data Format Preview -->
+            <div class="data-preview-section">
+                <h3>Data Format Preview</h3>
+                <div class="data-preview-container">
+                    <pre id="dataPreview"></pre>
+                    <button id="copyDataBtn" class="copy-button">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Card Template -->
+    <template id="cardTemplate">
+        <div class="id-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <h3>ID Card</h3>
+                        <div class="card-icons">
+                            <i class="fas fa-lock locked-icon"></i>
+                            <div class="filter-tags-display"></div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>ID:</strong> <span class="id-number"></span></p>
+                        <p><strong>Name:</strong> <span class="name"></span></p>
+                        <p><strong>Address:</strong> <span class="address"></span></p>
+                        <p><strong>DOB:</strong> <span class="dob"></span></p>
+                        <p><strong>Father's Name:</strong> <span class="father-name"></span></p>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <p><strong>Issued By:</strong> <span class="issued-by"></span></p>
+                        <p><strong>Issued On:</strong> <span class="issued-on"></span></p>
+                        <p><strong>Other:</strong> <span class="other"></span></p>
+                        <p><strong>Categories:</strong> <span class="filter-by"></span></p>
+                    </div>
+                </div>
+                <div class="card-controls">
+                    <button class="flip-btn" title="Flip Card">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button class="edit-btn" title="Edit Card">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="delete-btn" title="Delete Card">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    <button class="pin-btn" title="Pin/Unpin Card">
+                        <i class="fas fa-thumbtack"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
