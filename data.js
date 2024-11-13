@@ -43,5 +43,21 @@ const defaultCards = [
         "isLocked": false,
         "isPinned": false,
         "isFromData": true
-    }
+    },
+{
+    "id": "50755 (citizenship)",
+    "name": "Gyanendra Raj Aran",
+    "address": "Manthali Nagarpalika-9,Ramechhap",
+    "dob": "",
+    "fatherName": "TikaRaj/Maheswori",
+    "issuedBy": "2032-07-26 (DOB)",
+    "issuedOn": "",
+    "other": "member of KDC, Bar Association",
+    "filterBy": [
+        "Advocate"
+    ],
+    "isLocked": false,
+    "isPinned": false,
+    "isFromData": true,
+}
 ];
