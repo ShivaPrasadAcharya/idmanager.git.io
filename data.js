@@ -59,5 +59,23 @@ const defaultCards = [
     "isLocked": false,
     "isPinned": false,
     "isFromData": true,
+},
+{
+    "id": "8551 (citizenship)",
+    "name": "DhanRaj Gurung",
+    "address": "Arjun Chaupari-7, Syanja",
+    "dob": "1966-11-07",
+    "fatherName": "Purna Bahadhur Gurung",
+    "issuedBy": "CDO, office, Syanja on 2039/10/13",
+    "issuedOn": "",
+    "other": "Defeated Padma Aryal on 2079 HOR election",
+    "filterBy": [
+        "MP",
+        "Mantri (Kanoon)",
+        "Nepali Congress"
+    ],
+    "isLocked": false,
+    "isPinned": false,
+    "isFromData": false
 }
 ];
