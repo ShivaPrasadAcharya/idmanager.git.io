@@ -15,6 +15,22 @@ const defaultCards = [
         isFromData: true  // Flag to identify cards from data.js
     },
     {
+    "id": "",
+    "name": "Amit Sir, Government Attorney",
+    "address": "",
+    "dob": "",
+    "fatherName": "",
+    "issuedBy": "",
+    "issuedOn": "",
+    "other": "Phone no: 9849152151",
+    "filterBy": [
+        ""
+    ],
+    "isLocked": false,
+    "isPinned": false,
+    "isFromData": false
+},
+    {
         id: "ID002",
         name: "Jane Smith",
         address: "456 Oak Ave, Town",
