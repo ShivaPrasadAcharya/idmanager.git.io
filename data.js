@@ -15,7 +15,7 @@ const defaultCards = [
         isFromData: true  // Flag to identify cards from data.js
     },
     {
-    "id": "",
+    "id": "000A",
     "name": "Amit Sir, Government Attorney",
     "address": "",
     "dob": "",
